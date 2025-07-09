@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {SseService} from "../../shared/service/sse.service";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-scan',
@@ -11,15 +10,7 @@ export class ScanComponent {
   clientId: string = '';
   step: number = 1;
 
-  constructor(private sseService: SseService) {}
-
-  ngOnInit(): void {
-    this.sseService.getServerSentEvent('http://localhost:8080/pos/sse/123')
-      .subscribe({
-        next: (data: string) => console.log(data),
-        error: (err) => console.error('SSE error:', err)
-      });
-  }
+  constructor() {}
 
   startScan() {
     if (this.clientId.trim()) {
