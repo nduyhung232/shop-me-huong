@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h5>POS</h5>
+
+  <div class="mb-3">
+    <label for="clientId" class="form-label">Client ID</label>
+    <input type="text" class="form-control" id="clientId" [(ngModel)]="clientId">
+  </div>
+
+  <div class="mb-3">
+    <label for="customer" class="form-label">Tên khách hàng (tuỳ chọn)</label>
+    <select class="form-select" id="customer" [(ngModel)]="selectedCustomer">
+      <option value="">-- Chọn --</option>
+      <option *ngFor="let customer of customers" [value]="customer">{{ customer }}</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Danh sách sản phẩm</label>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let product of products">{{ product }}</li>
+    </ul>
+  </div>
+
+  <div class="text-end">
+    <button class="btn btn-warning" (click)="printInvoice()">In hóa đơn</button>
+  </div>
+</div>
