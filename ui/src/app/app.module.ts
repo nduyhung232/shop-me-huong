@@ -5,15 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
 import { PosComponent } from './pages/pos/pos.component';
-import { ScanComponent } from './pages/scan/scan.component';
 import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    PosComponent,
-    ScanComponent
+    PosComponent
   ],
   imports: [
     BrowserModule,

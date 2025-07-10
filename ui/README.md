@@ -25,3 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Run project with SSL
+ng serve --ssl true --ssl-cert "./localhost+3.pem" --ssl-key "./localhost+3-key.pem" --host 192.168.1.6
+

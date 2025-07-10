@@ -27,8 +27,4 @@ public class POSController {
         sseService.sendMessageToClient(clientId, message);
     }
 
-    @GetMapping("/sse/hello")
-    public String test() {
-        return "hello";
-    }
 }

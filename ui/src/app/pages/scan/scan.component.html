@@ -1,12 +1,10 @@
-<div class="container mt-4">
-  <div *ngIf="step === 1" id="step1">
-    <h5>Nhập Client ID</h5>
-    <input type="text" class="form-control mb-3" placeholder="Nhập Client ID" [(ngModel)]="clientId">
-    <button class="btn btn-primary" (click)="startScan()">Tiếp tục</button>
-  </div>
+<div class="container text-center">
+  <h3>QR Code Scanner (Standalone)</h3>
 
-  <div *ngIf="step === 2" id="step2">
-    <h5>Đang quét QR...</h5>
-    <div class="border p-5 text-center bg-light">[Camera / QR Area]</div>
+  <video #video autoplay playsinline style="width: 100%; max-width: 400px;"></video>
+
+  <div *ngIf="resultText" class="mt-3">
+    <p><strong>Result:</strong></p>
+    <p>{{ resultText }}</p>
   </div>
 </div>
